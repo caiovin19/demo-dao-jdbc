@@ -155,7 +155,9 @@ public class SellerDaoJDBC implements Sellerdao{
 	}
 
 	@Override
-	public List<Seller> findAll() {PreparedStatement st=null;
+	public List<Seller> findAll() {
+	
+    PreparedStatement st=null;
 	ResultSet rs=null;
 	try {
 		st=conn.prepareStatement("SELECT seller.*,department.Name as DepName "
